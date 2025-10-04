@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { socket } from "@/lib/socketClient";
 import ChatForm from "@/components/ChatForm";
 import ChatMessage from "@/components/ChatMessage";
+import sdk from "@farcaster/miniapp-sdk";
 
 export default function Home() {
     const [room, setRoom] = useState("");
@@ -15,6 +16,10 @@ export default function Home() {
             message: string;
         }[]
     >([]);
+
+    useEffect(() => {
+        sdk.actions.ready();
+    }, []);
 
     useEffect(() => {
         socket.on("message", (data) => {
