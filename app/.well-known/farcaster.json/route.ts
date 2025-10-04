@@ -12,13 +12,13 @@ export async function GET() {
     const URL = process.env.NEXT_PUBLIC_URL as string;
     return Response.json({
         accountAssociation: {
-            // these will be added in step 5
-            header: "",
-            payload: "",
-            signature: "",
+            header: "eyJmaWQiOjQ5MzE4NiwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDc5MmNBNDJGMkMyZjlEOWZCNTZkREJiZkU5YTA5MTZBRTZlOThERDgifQ",
+            payload: "eyJkb21haW4iOiJjaGF0c29ja2V0LW5leHRqcy52ZXJjZWwuYXBwIn0",
+            signature:
+                "GJgtAupZChLw1ye8Jhsp8DXI593BjmtxP8Xdp8HvYjACMstQG1d4Kd3b1/z8sNT4ynTlZlJ9iIepYRGM1jol7Rs=",
         },
         baseBuilder: {
-            allowedAddresses: ["0x792cA42F2C2f9D9fB56dDBbfE9a0916AE6e98DD8"], // add your Base Account address here
+            allowedAddresses: ["0x63776AE89Da21B51D74435142C9768d1A2ebe4F3"], // add your Base Account address here
         },
         miniapp: {
             version: "1",
